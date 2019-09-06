@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-badge>#S313231</ion-badge>
+  </ion-toolbar>
+</ion-header>
+<ion-content no-bounce>
+  <ion-item class="first-row">
+    <h2>Johnathan</h2>
+    <ion-badge item-end>$20 BONUS</ion-badge>
+  </ion-item>
+  <ion-item class="second-row">
+    <ion-grid>
+      <ion-row align-items-center>
+        <ion-col col-3>
+          <ion-item>
+            <p class="title">5</p>
+            <p class="subtitle">BAGS</p>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3>
+          <ion-item>
+            <p class="title">$31</p>
+            <p class="subtitle">ESTIMATE
+              <ion-icon name="ios-information-circle"></ion-icon>
+            </p>
+          </ion-item>
+        </ion-col>
+        <ion-col col-6>
+          <ion-item>
+            <p class="title">Baltimore, MD</p>
+            <p class="subtitle">25 min/5.0 mile drive</p>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-item>
+  <ion-item class="third-row">
+    <ion-label>I confirm that I have Hypoallergenic detergent.</ion-label>
+    <ion-checkbox [(ngModel)]="confirm" name="confirm" [@shakeit]="shakeState" (@shakeit.start)="shakeStart($event)" (@shakeit.done)="shakeEnd($event)"></ion-checkbox> <!-- [ngClass]="{ 'shake': confirm === false && unlocked === true }" -->
+  </ion-item>
+  <ion-item class="forth-row">
+    <unlocker (unlockedChanged)="unlockedChangedHandler($event)"></unlocker>
+  </ion-item>
+</ion-content>
