@@ -53,7 +53,7 @@ export class UnlockerComponent {
 
     public checkUnlock(evt: Event) {
         let theRange = Number(this.input.nativeElement.value);
-        if (evt.type == 'touchend') {
+        if (evt.type == 'touchend' || evt.type == 'mouseout') { // added mouseout to support in stackblitz
             if (theRange === 100) {
                 this.unlockAction();
             } else {

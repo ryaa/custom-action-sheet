@@ -36,7 +36,7 @@
   </ion-item>
   <ion-item class="third-row">
     <ion-label>I confirm that I have Hypoallergenic detergent.</ion-label>
-    <ion-checkbox [(ngModel)]="confirm" name="confirm" [@shakeit]="shakeState" (@shakeit.start)="shakeStart($event)" (@shakeit.done)="shakeEnd($event)"></ion-checkbox> <!-- [ngClass]="{ 'shake': confirm === false && unlocked === true }" -->
+    <ion-checkbox [(ngModel)]="confirm" name="confirm" [@shakeit]="shakeState" (@shakeit.start)="shakeStart($event)" (@shakeit.done)="shakeEnd($event)"></ion-checkbox>
   </ion-item>
   <ion-item class="forth-row">
     <unlocker (unlockedChanged)="unlockedChangedHandler($event)"></unlocker>
